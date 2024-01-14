@@ -1,0 +1,63 @@
+﻿@model baseapp.Models.ViewModels.AddPostRequest
+@{
+}
+
+<div class="bg-secondary bg-opacity-10 py-2">
+    <div class="container">
+        <h1>Create Post</h1>
+    </div>
+</div>
+
+<div class="container py-5">
+    <form method="post">
+
+        <div class="mb-3">
+            <label class="form-label">Heading</label>
+            <input type="text" class="form-control" id="Heading" asp-for="Heading" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Page Title</label>
+            <input type="text" class="form-control" id="PageTitle" asp-for="PageTitle" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Short Description</label>
+            <textarea class="form-control" id="ShortDescription" asp-for="ShortDescription" rows="3" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Author</label>
+            <input type="text" class="form-control" id="Author" asp-for="Author" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Content</label>
+            <textarea class="form-control" id="Content" asp-for="Content" rows="6" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Display Image URL</label>
+            <input type="file" class="form-control" id="DisplayImage" asp-for="DisplayImage" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">More Images (comma-separated URLs)</label>
+            <input type="file" class="form-control" id="MoreImages" asp-for="MoreImages" multiple/>
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="Visible" asp-for="Visible" />
+            <label class="form-check-label" for="Visible">Visible</label>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Tag Ids (comma-separated)</label>
+            <input type="text" class="form-control" id="TagIds" asp-for="TagIds" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+</div>
+
